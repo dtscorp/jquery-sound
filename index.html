@@ -22,7 +22,34 @@
         background-image:url(img/sapi.jpg);
         background-size: cover;
     }
-
+	.pig{
+        background-image:url(img/babi.jpeg);
+        background-size: cover;
+    }
+	.horse{
+        background-image:url(img/kuda.jpeg);
+        background-size: cover;
+    }
+	.cobra{
+        background-image:url(img/kobra.jpg);
+        background-size: cover;
+    }
+	.lion{
+        background-image:url(img/singa.jpeg);
+        background-size: cover;
+    }
+	.rhino{
+        background-image:url(img/badak.jpg);
+        background-size: cover;
+    }
+	.cat{
+        background-image:url(img/kucing.jpg);
+        background-size: cover;
+    }
+	.dog{
+        background-image:url(img/anjing.jpg);
+        background-size: cover;
+    }
 	.flex-container > div {
 	  background-color: #f1f1f1;
 	  margin: 10px;
@@ -45,7 +72,9 @@
 			<div class="flex-container">
 			  <div class="bebek">Bebek</div>
 			  <div class="kambing">Kambing</div>
-			  <div class="sapi">Sapi</div>  
+			  <div class="sapi">Sapi</div>
+			  <div class="babi">Babi</div>
+			  <div class="kuda">Kuda</div>  
 			</div>
 		  </div>
 		</div>
@@ -58,8 +87,11 @@
 		</h2>
 		<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 		  <div class="accordion-body">
-			<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-		  </div>
+			<div class="flex-container">
+				<div class="kucing">Kucing</div>
+				<div class="anjing">Anjing</div>
+			</div>
+			</div>
 		</div>
 	  </div>
 	  <div class="accordion-item">
@@ -69,9 +101,13 @@
 		  </button>
 		</h2>
 		<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-		  <div class="accordion-body">
-			<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-		  </div>
+		<div class="accordion-body">
+			<div class="flex-container">
+				<div class="kobra">Kobra</div>
+				<div class="singa">Singa</div>
+				<div class="badak">Badak</div>
+			</div>
+		</div>
 		</div>
 	  </div>
 	</div>
@@ -107,6 +143,78 @@
             $("div.sapi").click(function () {
                 $("<audio></audio>").attr({
                     'src': 'sound/suara-sapi.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			$("div.babi").click(function () {
+                $(this).toggleClass('pig');
+            });
+            $("div.babi").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-babi.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			$("div.kuda").click(function () {
+                $(this).toggleClass('horse');
+            });
+            $("div.kuda").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-kuda.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			// hewan peliharaan
+			$("div.kucing").click(function () {
+                $(this).toggleClass('cat');
+            });
+            $("div.kucing").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-kucing.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			$("div.anjing").click(function () {
+                $(this).toggleClass('dog');
+            });
+            $("div.anjing").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-anjing.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			// hewan buas
+			$("div.kobra").click(function () {
+                $(this).toggleClass('cobra');
+            });
+            $("div.kobra").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-kobra.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			$("div.singa").click(function () {
+                $(this).toggleClass('lion');
+            });
+            $("div.singa").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-singa.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+			$("div.badak").click(function () {
+                $(this).toggleClass('rhino');
+            });
+            $("div.badak").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'sound/suara-badak.mp3',
                     'volume': 0.4,
                     'autoplay': 'autoplay'
                 }).appendTo("div");
